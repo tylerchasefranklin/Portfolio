@@ -1,0 +1,243 @@
+/* sets background image and makes it take up 100% of the viewport, sets text color to white and centers it, takes bootstrap font from navbar and applies it to rest of page for consistency  */
+body {
+    background: url("../images/background(crop).jpg")no-repeat center center;
+    background-color: black;
+    height: 100vh;
+    color: white;
+    text-align: justify;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+main {
+    margin: .5% 3%;
+    padding: .5% 3%;
+}
+
+h2 {
+    text-align: center;
+    margin: 2%;
+    padding: 2%;
+}
+
+.static {
+    position: static;
+}
+
+/* changes color for nav links */
+.nav-link {
+    color: gray;
+    --bs-navbar-active-color: white;
+}
+
+/* changes border color for hamburger menu */
+.navbar-toggler {
+    --bs-navbar-toggler-border-color: lightgray;
+ }
+
+/* changes color for hamburger menu on hover */
+.navbar-toggler:hover {
+    color: #f712a0;
+    --bs-navbar-toggler-border-color: #f712a0;
+}
+
+/* changes colors for dropdown menu and hover on links */
+.dropdown-menu {
+    --bs-dropdown-link-hover-color: #f712a0;
+    --bs-dropdown-link-hover-bg: black;
+    --bs-dropdown-link-color: lightgray;
+    --bs-dropdown-bg: black;
+}
+
+/* changes colors for social media links */
+.btn {
+    --bs-btn-color: white;
+    --bs-btn-hover-color: #f712a0;
+    --bs-btn-hover-border-color: #f712a0;
+}
+
+a {
+    color: #f712a0;
+    text-decoration: none;
+}
+
+/* changes hover color for nav links */
+a:hover {
+    color: #f759b1;
+    --bs-nav-link-hover-color: #f712a0;
+}
+
+.pink {
+    color: #f712a0;
+}
+
+.quote {
+    font-size: .85em;
+    margin: 0 auto;
+    text-align: justify;
+    width: 45%;
+}
+
+.mini-bio p {
+    margin: .25% auto;
+    padding: .25%;
+}
+
+.black-trans {
+    background-color: rgb(0, 0, 0, 0.9);
+    border-radius: 2%;
+}
+
+.mini-bio {
+    margin-top: 2%;
+    padding: 1%;
+    font-size: 1.1em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1%;
+    margin: 3% auto;
+}
+
+.bio {
+    margin: 2% auto;
+    padding: .5%;
+}
+
+.contact {
+    margin: 2% auto;
+    padding: .5%;
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+section p {
+    padding: 1% 3%;
+    margin: 1% 1%;
+}
+
+.accordion-button:after {
+    content: "\002B";
+    font-size: 1.5em;
+}
+
+.accordion-button:not(.collapsed)::after {
+    content: "\2212";
+    font-size: 1.5em;
+}
+
+.info-header {
+    margin-bottom: 5%;
+}
+
+.accordion-button:hover {
+    color: #f712a0;
+}
+
+.grid-container-3 {
+    margin: 2%;
+    padding: 1%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+
+.grid-item-container {
+    display: grid;
+    padding: 3%;
+    overflow: hidden;
+}
+
+.grid-image {
+    width: 100%;
+    height: 100%;
+}
+
+.caption {
+    padding: 0;
+    margin: 0;
+    margin-top: 1%;
+}
+
+.fixed {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* center nav links for smaller screen sizes */
+@media screen and (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: .25%;
+    }
+
+    .mini-bio {
+        padding: 1% 5%;
+        margin: 4% auto;
+    }
+
+    .mini-bio p {
+        margin-bottom: 4%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    .contact div p {
+        margin: 5% auto;
+    }
+
+    .info-header {
+        margin-top: 5%;
+    }
+
+    .coding-work {
+        margin-top: 5%;
+    }
+}
+
+/* fixes footer to bottom and makes it take up full width of the container */
+@media screen and (min-width: 991px) {
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .navbar-toggler {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .grid-item {
+        overflow: hidden;
+    }
+
+    .grid-container-3 {
+        grid-template-columns: 1fr;
+    }
+}
